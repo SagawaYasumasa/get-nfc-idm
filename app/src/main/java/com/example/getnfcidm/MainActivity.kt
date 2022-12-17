@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity() , Runnable {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val tvVersion = findViewById<TextView>(R.id.tvVersion)
+        tvVersion.text = BuildConfig.VERSION_NAME
         felica.setListener(felicaListener)
     }
     override fun onStop(){
@@ -124,4 +126,3 @@ class FelicaReader(private val context: Context, private val activity: Activity)
         }
     }
 }
-
