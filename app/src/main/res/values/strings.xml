@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">NFC IDm checker</string>
     <string name="tvMain_label">カードをタッチしてください</string>
+    <string name="version_label">version %1$s</string>
 </resources>
