@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() , Runnable {
         setContentView(R.layout.activity_main)
 
         val tvVersion = findViewById<TextView>(R.id.tvVersion)
-        tvVersion.text = BuildConfig.VERSION_NAME
+        val version = getString(R.string.version_label,BuildConfig.VERSION_NAME)
+        tvVersion.text = version
         felica.setListener(felicaListener)
     }
     override fun onStop(){
