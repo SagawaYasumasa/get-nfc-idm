@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() , Runnable {
     }
     private fun byteToHex(b: ByteArray) : String{
         var s =""
-        for (i in 0..b.size-1){
+        for (i in 0 until b.size){
             s += "[%02X]".format(b[i])
 //            s += "%02X".format(b[i])
         }
