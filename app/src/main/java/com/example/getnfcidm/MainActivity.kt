@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
-
 import android.widget.*
 // NFC関連
 import android.nfc.NfcAdapter
@@ -12,8 +11,9 @@ import android.nfc.NfcManager
 import android.nfc.Tag
 import android.nfc.tech.NfcF
 import android.os.*
+import kotlinx.coroutines.Runnable
 
-class MainActivity : AppCompatActivity() , Runnable {
+class MainActivity : AppCompatActivity(), Runnable  {
     val felica = FelicaReader(this,this)
 
     private val felicaListener = object : FelicaReaderInterface{
